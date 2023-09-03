@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit } from '@angular/core';
+import { Component, OnInit, DoCheck, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-check-sample',
@@ -10,7 +10,8 @@ export class CheckSampleComponent implements
 	AfterContentInit,
 	AfterContentChecked,
 	AfterViewInit,
-	AfterViewChecked
+	AfterViewChecked,
+	OnDestroy
 {
 
 	quantidade: number = 0;
@@ -54,5 +55,9 @@ export class CheckSampleComponent implements
 	//Após alguma lateração verifica a view
 	ngAfterViewChecked(): void {
 		console.log(`Olá, eu sou o ngAfterViewChecked`);
+	}
+
+	ngOnDestroy(): void {
+		console.log(`Olá, eu sou o ngOnDestroy`);
 	}
 }

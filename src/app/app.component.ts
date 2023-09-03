@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'projeto-angular';
+
+	isAliveCheckSample: boolean = true;
+
+	disposeChechSample(): void{
+		this.isAliveCheckSample = false;
+	}
 }

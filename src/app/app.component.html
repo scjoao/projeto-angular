@@ -5,4 +5,6 @@
 <!-- <app-title nome="Batatinha"></app-title> -->
 <!-- <app-title nome="Moranguinho"></app-title> -->
 
-<app-check-sample></app-check-sample>
+<app-check-sample *ngIf="isAliveCheckSample"></app-check-sample>
+
+<button (click)="disposeChechSample()">Destruir</button>
